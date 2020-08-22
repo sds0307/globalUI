@@ -7,7 +7,7 @@ var server = http.createServer(app);
 const port = 3001;
 
 server.listen(port, function() {
-    log.info(`Express server listening on port ${port}`);
+    console.log(`Express server listening on port ${port}`);
 });
 
 app.get('/', (req, res) => {
