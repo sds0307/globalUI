@@ -10,6 +10,3 @@ server.listen(port, function() {
     console.log(`Express server listening on port ${port}`);
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
