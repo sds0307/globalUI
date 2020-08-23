@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         shell: {
             devWatch: {
                 command: [
-                    'echo "$(tput bold)Building the Angular application. Please wait until this completes before trying to access the served application$(tput sgr0)"',
+                    'echo "Building the Angular application. Please wait until this completes before trying to access the served application"',
                     'ng build --watch'
                 ].join('&&')
             } 
