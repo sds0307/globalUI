@@ -15,10 +15,29 @@ module.exports = function(grunt) {
                     script: 'server/server.js'
                 }
             }
+        },
+        concurrent: {
+            dev: {
+                options: {
+                    logConcurrentOutput: true
+                },
+                tasks: [
+                    'express:dev',
+                    'shell:devWatch'
+                ]
+            }
+        },
+        shell: {
+            devWatch: {
+                command: [
+                    'echo "$(tput bold)Building the Angular application. Please wait until this completes before trying to access the served application$(tput sgr0)"',
+                    'ng build --watch'
+                ].join('&&')
+            } 
         }
     });
 
-    grunt.registerTask('serve', ['express:dev']);
+    grunt.registerTask('serve', ['concurrent:dev']);
     grunt.registerTask('default', ['serve']);
 
 };
