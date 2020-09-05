@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 
 import { AngularComponentsModule } from '@sds0307/angular-components';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [],
   imports: [
-    AngularComponentsModule
+    AngularComponentsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [],
   exports: [
-    AngularComponentsModule
+    AngularComponentsModule,
+    CommonModule
   ]
 })
 export class GlobalCommonModule { }

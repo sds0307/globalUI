@@ -1,3 +1,12 @@
-<p>
-  global-insights works!
-</p>
+
+<div *ngFor="let user of userList1">
+  <sds-profile-card 
+    [name]='user.name'
+    [company]='user.company.name'
+    [email]='user.email'
+    [url]='user.website'>
+  </sds-profile-card>
+</div>
+
+
+
