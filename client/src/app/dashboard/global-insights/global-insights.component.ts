@@ -9,24 +9,16 @@ import { IUsers } from 'src/models/users.interface';
   templateUrl: './global-insights.component.html',
   styleUrls: ['./global-insights.component.less']
 })
-export class GlobalInsightsComponent implements OnInit {
+export class GlobalInsightsComponent {
 
   constructor(private usersService: UsersService) { }
 
-  public $users : Observable<IUsers[]> = this.usersService.users$
+  public $users : Observable<IUsers[]> = this.usersService.getTopUsers(4)
   .pipe(
     catchError(err => {
       console.log('error: ', err);
       return EMPTY;
     })
   );
-
-  public userList1 : IUsers[];
-
-  ngOnInit() {
-    this.$users.subscribe(
-      (usersList) => {this.userList1 = usersList}
-    )
-  }
 
 }

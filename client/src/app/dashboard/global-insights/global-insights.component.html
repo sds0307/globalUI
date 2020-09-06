@@ -1,12 +1,15 @@
 
-<div *ngFor="let user of userList1">
-  <sds-profile-card 
-    [name]='user.name'
-    [company]='user.company.name'
-    [email]='user.email'
-    [url]='user.website'>
-  </sds-profile-card>
+<div class="insights-outer">
+  <table>
+      <tr>
+        <td *ngFor="let user of $users | async" class="insights-cell">
+          <sds-profile-card
+            [name]='user.name'
+            [company]='user.company.name'
+            [email]='user.email'
+            [url]='user.website'>
+          </sds-profile-card>
+        </td>
+      </tr>
+  </table>
 </div>
-
-
-
