@@ -1,6 +1,6 @@
 'use strict';
 
-var express = require('express')
+var express = require('express');
 var app = express();
 var index = require('./routes/index');
 const path = require('path');
@@ -11,8 +11,8 @@ app.set('view engine', 'html');
 
 // Serve contents of client directory as static files.
 app.use(express.static(
-        path.resolve(__dirname, 'dist', 'client')
-    )
+  path.resolve(__dirname, 'dist', 'client')
+)
 );
 
 app.get('*', index());

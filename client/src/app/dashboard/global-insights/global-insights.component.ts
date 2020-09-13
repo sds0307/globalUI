@@ -5,7 +5,7 @@ import { EMPTY, Observable } from 'rxjs';
 import { IUsers } from 'src/models/users.interface';
 
 @Component({
-  selector: 'global-insights',
+  selector: 'app-global-insights',
   templateUrl: './global-insights.component.html',
   styleUrls: ['./global-insights.component.less']
 })
@@ -13,7 +13,7 @@ export class GlobalInsightsComponent {
 
   constructor(private usersService: UsersService) { }
 
-  public $users : Observable<IUsers[]> = this.usersService.getTopUsers(4)
+  public $users: Observable<IUsers[]> = this.usersService.getTopUsers(4)
   .pipe(
     catchError(err => {
       console.log('error: ', err);
