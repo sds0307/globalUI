@@ -25,7 +25,7 @@ export class UsersService {
     public getTopUsers(count: number): Observable<IUsers[]> {
         return this.users$
                 .pipe(
-                    map(data => data.splice(0,count))
+                    map(data => data.splice(0, count))
                 );
     }
 }

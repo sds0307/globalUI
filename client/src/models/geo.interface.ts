@@ -1,4 +1,4 @@
 export interface IGeo {
-    lat: string,
-    lng: string
+    lat: string;
+    lng: string;
 }
