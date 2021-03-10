@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../../services/users.service';
+import { UsersService } from '../../../services/users.service';
 import { catchError } from 'rxjs/operators';
 import { EMPTY, Observable } from 'rxjs';
 import { IUsers } from 'src/models/users.interface';

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 
 import { DashboardComponent } from './dashboard.component';
-import { GlobalCommonModule } from '../common/common.module';
-import { GlobalInsightsComponent } from './global-insights/global-insights.component';
+import { GlobalCommonModule } from '../../../common/common.module';
+import { GlobalInsightsComponent } from '../global-insights/global-insights.component';
 
 @NgModule({
   declarations: [
