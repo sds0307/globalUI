@@ -1,27 +1,19 @@
 # GlobalUI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
+Global UI is an Angular application that is served by an Express Middleware server. This project serves as a start up project for an Angular application that tries to inculcate some of the best practices for an Enterprise Application (Work in Progress) 
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm start` for the server to start up and serve the Angular files. Navigate to `http://localhost:4200/`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build` to build the project.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests.
 
-## Running end-to-end tests
+## Lint
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `npm run lint` to run the linter. Add suffix `:fix` to auto-fix linting issues. 
